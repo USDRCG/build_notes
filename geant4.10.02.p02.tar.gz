@@ -1,0 +1,29 @@
+#Geant4 installation guide can be found at below link:
+#http://geant4.web.cern.ch/geant4/UserDocumentation/UsersGuides/InstallationGuide/html/
+#geant4 has prereqs for build including a current version of cmake (3.3+), and GNU compiler collection
+#doit.sh file is located in '/home/Joseph.Madison/install_files/geant4/build' directory (doit.sh is shown below)
+
+################################################################
+!/bin/bash
+
+#Try these later:
+#-DGEANT4_USE_QT=ON
+
+#Run this first!
+#scl enable devtoolset-2 bash
+
+source /share/apps/cmake/env.sh
+
+cd /home/Joseph.Madison/install_files/geant4/build
+
+cmake -DCMAKE_INSTALL_PREFIX=/share/apps/geant4.10.02.p02 \
+      -DGEANT4_BUILD_MULTITHREADED=ON \
+      -DXERCESC_ROOT_DIR=/share/apps/xerces-c \
+      -DGEANT4_USE_GDML=ON \
+      -DGEANT4_USE_OPENGL_X11=ON \
+/home/Joseph.Madison/install_files/geant4/geant4.10.02.p02
+
+################################################################
+
+#Note: this build took 8 hours on login node...
+#be smarter about future builds as geant4 takes a veryyyy long time to build!
