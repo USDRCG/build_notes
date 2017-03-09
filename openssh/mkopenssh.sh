@@ -5,8 +5,8 @@ BASE_URL="http://ftp.jaist.ac.jp/pub/OpenBSD/OpenSSH/portable"
 # http://ftp.jaist.ac.jp/pub/OpenBSD/OpenSSH/portable/openssh-6.6p1.tar.gz
 # http://ftp.jaist.ac.jp/pub/OpenBSD/OpenSSH/portable/openssh-7.4p1.tar.gz
 
-VER="openssh-7.4p1"
-#VER="openssh-6.6p1"
+#VER="openssh-7.4p1"
+VER="openssh-6.6p1"
 
 SRC_URL="$BASE_URL/$VER.tar.gz"
 
